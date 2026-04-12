@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Jyoti Putty — UX designer: background, philosophy, and career path.">
+    <title>About — Jyoti Putty</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- SCROLL PROGRESS BAR: Thin bar at top that fills with blue gradient as user scrolls -->
+    <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+    <nav class="site-nav" aria-label="Main navigation">
+        <button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open navigation menu">
+            <span class="site-nav__toggle-bars" aria-hidden="true">
+                <span class="site-nav__toggle-bar"></span>
+                <span class="site-nav__toggle-bar"></span>
+                <span class="site-nav__toggle-bar"></span>
+            </span>
+            <span class="site-nav__toggle-text">Menu</span>
+        </button>
+        <button type="button" class="site-nav__dark-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode">
+            <span class="site-nav__dark-icon" aria-hidden="true">🌙</span>
+        </button>
+        <div id="site-nav-panel" class="site-nav__panel">
+            <ul class="site-nav__list">
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="index.html" data-section="home">Home</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link is-active" href="about.html" data-section="about">About</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="projects.html" data-section="projects">Projects</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="products.html" data-section="products">Products</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="contact.html" data-section="contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="about-page">
+        <section class="about-intro" aria-labelledby="about-page-heading">
+            <h1 id="about-page-heading" class="about-page__title">About</h1>
+            <div class="about-intro__grid">
+                <div class="about-profile" role="img" aria-label="Profile photo placeholder showing initials J P">
+                    <span class="about-profile__initials" aria-hidden="true">JP</span>
+                </div>
+                <div class="about-intro__bio">
+                    <p>Hey there! I'm Jyoti Putty, a UX designer with about five years under my belt. Before diving into design, I studied psychology and spent some time in customer support, which really shaped how I think about user experience. I believe good UX isn't about flashy visuals—it's about making things clear, respecting people's time, and creating inclusive experiences that work for everyone.</p>
+                    <p>I love collaborating closely with research and engineering teams, getting honest feedback, and building those 'ugly early' prototypes that help us learn fast. What gets me excited is seeing someone stuck on a flow, and then with a small tweak—like simpler wording or a better default—watching them breeze through with confidence. Whether it's signing up for a service, navigating a dashboard, or using an app on the go, I focus on those real outcomes: less hassle, fewer mistakes, and experiences that just feel right.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-timeline" aria-labelledby="timeline-heading">
+            <h2 id="timeline-heading" class="about-timeline__title">Career timeline</h2>
+            <ol class="timeline">
+                <li class="timeline__item">
+                    <time class="timeline__year" datetime="2019">2019</time>
+                    <div class="timeline__body">
+                        <h3 class="timeline__heading">Junior UX designer</h3>
+                        <p>Joined a small product team, supporting usability tests, wireframes, and design QA while learning the rhythms of agile delivery.</p>
+                    </div>
+                </li>
+                <li class="timeline__item">
+                    <time class="timeline__year" datetime="2020">2020</time>
+                    <div class="timeline__body">
+                        <h3 class="timeline__heading">First end-to-end feature ownership</h3>
+                        <p>Led discovery and design for a billing self-serve flow, partnering with research to validate concepts before build.</p>
+                    </div>
+                </li>
+                <li class="timeline__item">
+                    <time class="timeline__year" datetime="2021">2021</time>
+                    <div class="timeline__body">
+                        <h3 class="timeline__heading">Mid-level UX designer</h3>
+                        <p>Promoted after consistently shipping research-informed patterns; helped establish shared components in Figma for the design system.</p>
+                    </div>
+                </li>
+                <li class="timeline__item">
+                    <time class="timeline__year" datetime="2022">2022</time>
+                    <div class="timeline__body">
+                        <h3 class="timeline__heading">Cross-functional product initiative</h3>
+                        <p>Co-led a mobile onboarding refresh with PM and engineering, reducing drop-off through iterative prototyping and usability rounds.</p>
+                    </div>
+                </li>
+                <li class="timeline__item">
+                    <time class="timeline__year" datetime="2023">2023</time>
+                    <div class="timeline__body">
+                        <h3 class="timeline__heading">Mentoring and design critiques</h3>
+                        <p>Formalized critique facilitation for the design pod and mentored an intern through their first shipped project.</p>
+                    </div>
+                </li>
+                <li class="timeline__item">
+                    <time class="timeline__year" datetime="2024">2024</time>
+                    <div class="timeline__body">
+                        <h3 class="timeline__heading">Major platform redesign</h3>
+                        <p>Contributed core flows and documentation for a large IA and navigation overhaul used by thousands of weekly active users.</p>
+                    </div>
+                </li>
+                <li class="timeline__item">
+                    <time class="timeline__year" datetime="2025">2025</time>
+                    <div class="timeline__body">
+                        <h3 class="timeline__heading">Accessibility and systems focus</h3>
+                        <p>Drove WCAG-oriented audits and fixes across key journeys while refining handoff specs for engineering partners.</p>
+                    </div>
+                </li>
+                <li class="timeline__item timeline__item--current">
+                    <time class="timeline__year" datetime="2026">2026</time>
+                    <div class="timeline__body">
+                        <h3 class="timeline__heading">Today</h3>
+                        <p>Continuing to lead complex UX work—balancing strategy, craft, and evidence—while exploring the next chapter of product impact.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <p class="site-footer__name">Jyoti Putty</p>
+                <p class="site-footer__tagline">I design digital experiences that people actually enjoy using.</p>
+            </div>
+            <nav class="site-footer__nav" aria-label="Footer navigation">
+                <h2 class="site-footer__heading">Pages</h2>
+                <ul class="site-footer__links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="site-footer__social-wrap">
+                <h2 class="site-footer__heading">Social</h2>
+                <ul class="site-footer__social">
+                    <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">Dribbble</a></li>
+                    <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                </ul>
+            </div>
+            <div class="site-footer__bottom">
+                <small class="site-footer__copy">&copy; <span id="year"></span> Jyoti Putty. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>

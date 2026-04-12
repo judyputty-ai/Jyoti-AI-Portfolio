@@ -1,0 +1,203 @@
+<!-- DOCUMENT TYPE: Tells the browser "this is a modern HTML5 page" (not an old format). -->
+<!DOCTYPE html>
+
+<!-- PAGE WRAPPER: Everything visible (and setup for the page) lives inside this. lang="en" means the main language is English (helps screen readers and search engines). -->
+<html lang="en">
+
+<!-- HEAD: "Behind the scenes" stuff — not the main article people read first, but settings, title, and links to your design file. -->
+<head>
+    <!-- CHARACTER SET: So letters and symbols (including accents and emoji) show correctly everywhere. -->
+    <meta charset="UTF-8">
+
+    <!-- MOBILE VIEWPORT: Makes the page scale nicely on phones instead of looking like a tiny desktop zoomed out. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SHORT DESCRIPTION: Often used in search results or when someone shares the link — a one-line summary of the site. -->
+    <meta name="description" content="Portfolio of Jyoti Putty — UX designer with 5 years of experience.">
+
+    <!-- PAGE TITLE: The text on the browser tab; also used as a default name when someone bookmarks the page. -->
+    <title>Jyoti Putty — UX Designer</title>
+
+    <!-- STYLESHEET LINK: Connects your separate CSS file so colors, fonts, and layout apply to this page. -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<!-- BODY: What actually appears on the page — headings, paragraphs, images, buttons, etc. -->
+<body>
+    <!-- SCROLL PROGRESS BAR: Thin bar at top that fills with blue gradient as user scrolls -->
+    <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+    <!-- MAIN NAVIGATION: Sticky bar with in-page links; script.js marks the active link while you scroll. -->
+    <nav class="site-nav" aria-label="Main navigation">
+        <button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open navigation menu">
+            <span class="site-nav__toggle-bars" aria-hidden="true">
+                <span class="site-nav__toggle-bar"></span>
+                <span class="site-nav__toggle-bar"></span>
+                <span class="site-nav__toggle-bar"></span>
+            </span>
+            <span class="site-nav__toggle-text">Menu</span>
+        </button>
+        <button type="button" class="site-nav__dark-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode">
+            <span class="site-nav__dark-icon" aria-hidden="true">🌙</span>
+        </button>
+        <div id="site-nav-panel" class="site-nav__panel">
+            <ul class="site-nav__list">
+                <li class="site-nav__item">
+                    <a class="site-nav__link is-active" href="index.html" data-section="home">Home</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="about.html" data-section="about">About</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="projects.html" data-section="projects">Projects</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="products.html" data-section="products">Products</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="contact.html" data-section="contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO: Full-viewport intro with gradient, headline, subhead, and CTA to Projects. -->
+    <section id="home" class="hero" aria-label="Introduction">
+        <div class="hero__inner">
+            <h1 class="hero__title">
+                <span class="hero__title-line">Hi, I'm Jyoti Putty</span>
+                <span class="hero__title-line">UX Designer</span>
+            </h1>
+            <p class="hero__sub">I design digital experiences that people actually enjoy using.</p>
+            <a class="hero__cta" href="projects.html">See My Work</a>
+        </div>
+    </section>
+
+    <!-- SKILLS: Responsive card grid below the hero. -->
+    <section class="skills" aria-labelledby="skills-heading">
+        <div class="skills__inner">
+            <h2 id="skills-heading" class="skills__heading">Skills</h2>
+            <ul class="skills__grid">
+                <li class="skills__cell">
+                    <div class="skill-card">
+                        <span class="skill-card__emoji" aria-hidden="true">🔍</span>
+                        <h3 class="skill-card__title">User Research</h3>
+                        <p class="skill-card__desc">Uncovering goals, pain points, and context through interviews, surveys, and synthesis so decisions stay grounded in real people.</p>
+                    </div>
+                </li>
+                <li class="skills__cell">
+                    <div class="skill-card">
+                        <span class="skill-card__emoji" aria-hidden="true">📐</span>
+                        <h3 class="skill-card__title">Wireframing</h3>
+                        <p class="skill-card__desc">Sketching layouts and flows in low fidelity to nail structure, hierarchy, and screen-to-screen logic before visual polish.</p>
+                    </div>
+                </li>
+                <li class="skills__cell">
+                    <div class="skill-card">
+                        <span class="skill-card__emoji" aria-hidden="true">🧩</span>
+                        <h3 class="skill-card__title">Prototyping</h3>
+                        <p class="skill-card__desc">Building clickable models to test interactions, gather feedback, and iterate quickly on how a product should feel in use.</p>
+                    </div>
+                </li>
+                <li class="skills__cell">
+                    <div class="skill-card">
+                        <span class="skill-card__emoji" aria-hidden="true">🎨</span>
+                        <h3 class="skill-card__title">Figma</h3>
+                        <p class="skill-card__desc">Using components, auto layout, and shared libraries so designs scale, stay consistent, and hand off cleanly to development.</p>
+                    </div>
+                </li>
+                <li class="skills__cell">
+                    <div class="skill-card">
+                        <span class="skill-card__emoji" aria-hidden="true">✅</span>
+                        <h3 class="skill-card__title">Usability Testing</h3>
+                        <p class="skill-card__desc">Running moderated sessions and task-based tests to spot friction, validate flows, and prioritize improvements with clear evidence.</p>
+                    </div>
+                </li>
+                <li class="skills__cell">
+                    <div class="skill-card">
+                        <span class="skill-card__emoji" aria-hidden="true">✨</span>
+                        <h3 class="skill-card__title">Visual Design</h3>
+                        <p class="skill-card__desc">Refining typography, color, spacing, and imagery so interfaces feel cohesive, accessible, and aligned with the brand story.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS: Quote cards from happy clients -->
+    <section class="testimonials" aria-labelledby="testimonials-heading">
+        <div class="testimonials__inner">
+            <h2 id="testimonials-heading" class="testimonials__heading">What Clients Say</h2>
+            <ul class="testimonials__grid">
+                <li class="testimonials__cell">
+                    <blockquote class="testimonial-card">
+                        <p class="testimonial-card__quote">"Jyoti's designs made our app user-friendly and engaging. Highly recommend!"</p>
+                        <cite class="testimonial-card__author">— Sarah K., Startup Founder</cite>
+                    </blockquote>
+                </li>
+                <li class="testimonials__cell">
+                    <blockquote class="testimonial-card">
+                        <p class="testimonial-card__quote">"Working with Jyoti was a game-changer for our product. Professional and insightful."</p>
+                        <cite class="testimonial-card__author">— Mike T., Product Manager</cite>
+                    </blockquote>
+                </li>
+                <li class="testimonials__cell">
+                    <blockquote class="testimonial-card">
+                        <p class="testimonial-card__quote">"The UX improvements Jyoti suggested boosted our conversion rates significantly."</p>
+                        <cite class="testimonial-card__author">— Emily R., E-commerce Director</cite>
+                    </blockquote>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT: The primary stuff you want visitors to read or do (projects, about, contact — will grow here). -->
+    <main id="main">
+        <section id="about" class="content-section" aria-labelledby="about-heading">
+            <h2 id="about-heading">About</h2>
+            <p>Jyoti is a UX designer with five years of experience shaping products that feel clear, inclusive, and grounded in real user needs.</p>
+        </section>
+
+        <section id="projects" class="content-section" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Selected work</h2>
+            <p>Explore detailed case studies and process write-ups on the dedicated <a href="projects.html">Projects</a> page.</p>
+        </section>
+
+        <section id="contact" class="content-section" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Get in touch</h2>
+            <p>Use the <a href="contact.html">contact form</a> for project enquiries, collaboration, or a quick hello.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <p class="site-footer__name">Jyoti Putty</p>
+                <p class="site-footer__tagline">I design digital experiences that people actually enjoy using.</p>
+            </div>
+            <nav class="site-footer__nav" aria-label="Footer navigation">
+                <h2 class="site-footer__heading">Pages</h2>
+                <ul class="site-footer__links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="site-footer__social-wrap">
+                <h2 class="site-footer__heading">Social</h2>
+                <ul class="site-footer__social">
+                    <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">Dribbble</a></li>
+                    <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                </ul>
+            </div>
+            <div class="site-footer__bottom">
+                <small class="site-footer__copy">&copy; <span id="year"></span> Jyoti Putty. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILE: Linked at the end so the page HTML loads first; defer means "run this after the HTML is parsed." -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>

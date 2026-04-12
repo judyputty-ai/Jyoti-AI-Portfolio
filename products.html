@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product work by Jyoti Putty — UAT transformation for banking and health metrics for large programs.">
+    <title>Products — Jyoti Putty</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- SCROLL PROGRESS BAR: Thin bar at top that fills with blue gradient as user scrolls -->
+    <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+    <nav class="site-nav" aria-label="Main navigation">
+        <button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open navigation menu">
+            <span class="site-nav__toggle-bars" aria-hidden="true">
+                <span class="site-nav__toggle-bar"></span>
+                <span class="site-nav__toggle-bar"></span>
+                <span class="site-nav__toggle-bar"></span>
+            </span>
+            <span class="site-nav__toggle-text">Menu</span>
+        </button>
+        <button type="button" class="site-nav__dark-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode">
+            <span class="site-nav__dark-icon" aria-hidden="true">🌙</span>
+        </button>
+        <div id="site-nav-panel" class="site-nav__panel">
+            <ul class="site-nav__list">
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="index.html" data-section="home">Home</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="about.html" data-section="about">About</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="projects.html" data-section="projects">Projects</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link is-active" href="products.html" data-section="products">Products</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="contact.html" data-section="contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="products-page">
+        <header class="products-page__header">
+            <h1 class="products-page__title">Products</h1>
+            <p class="products-page__lede">Focused product work on UAT readiness, governance, and metrics that keep large programs visible and under control.</p>
+        </header>
+
+        <ul class="project-gallery project-gallery--products" role="list">
+            <li class="project-gallery__item">
+                <article class="project-card project-card--blue-a">
+                    <div class="project-card__cover" aria-hidden="true">
+                        <span class="project-card__cover-label">Banks UAT</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h2 class="project-card__title">Transforming Banks UAT process</h2>
+                        <p class="project-card__desc">Reimagined how business and IT run user acceptance testing so sign-off is traceable, environments stay stable, and defects surface early instead of at go-live.</p>
+                        <ul class="project-card__tags" aria-label="Tools used">
+                            <li><span class="project-tag">Workshops</span></li>
+                            <li><span class="project-tag">Jira</span></li>
+                            <li><span class="project-tag">Confluence</span></li>
+                            <li><span class="project-tag">Figma</span></li>
+                        </ul>
+                        <a class="project-card__cta" href="#">View Case Study</a>
+                    </div>
+                </article>
+            </li>
+            <li class="project-gallery__item">
+                <article class="project-card project-card--blue-b">
+                    <div class="project-card__cover" aria-hidden="true">
+                        <span class="project-card__cover-label">Health UAT metrics</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h2 class="project-card__title">UAT Health metrics for Large Projects</h2>
+                        <p class="project-card__desc">Built a metrics layer and dashboard language so leadership can see UAT throughput, defect burn-down, and risk hotspots across many workstreams without drowning in spreadsheets.</p>
+                        <ul class="project-card__tags" aria-label="Tools used">
+                            <li><span class="project-tag">Dashboards</span></li>
+                            <li><span class="project-tag">Analytics</span></li>
+                            <li><span class="project-tag">Figma</span></li>
+                            <li><span class="project-tag">Documentation</span></li>
+                        </ul>
+                        <a class="project-card__cta" href="#">View Case Study</a>
+                    </div>
+                </article>
+            </li>
+        </ul>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <p class="site-footer__name">Jyoti Putty</p>
+                <p class="site-footer__tagline">I design digital experiences that people actually enjoy using.</p>
+            </div>
+            <nav class="site-footer__nav" aria-label="Footer navigation">
+                <h2 class="site-footer__heading">Pages</h2>
+                <ul class="site-footer__links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="site-footer__social-wrap">
+                <h2 class="site-footer__heading">Social</h2>
+                <ul class="site-footer__social">
+                    <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">Dribbble</a></li>
+                    <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                </ul>
+            </div>
+            <div class="site-footer__bottom">
+                <small class="site-footer__copy">&copy; <span id="year"></span> Jyoti Putty. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>

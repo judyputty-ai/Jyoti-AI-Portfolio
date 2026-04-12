@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Selected UX projects by Jyoti Putty — case studies in fintech, health, B2B SaaS, and mobile commerce.">
+    <title>Projects — Jyoti Putty</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- SCROLL PROGRESS BAR: Thin bar at top that fills with blue gradient as user scrolls -->
+    <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+    <nav class="site-nav" aria-label="Main navigation">
+        <button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open navigation menu">
+            <span class="site-nav__toggle-bars" aria-hidden="true">
+                <span class="site-nav__toggle-bar"></span>
+                <span class="site-nav__toggle-bar"></span>
+                <span class="site-nav__toggle-bar"></span>
+            </span>
+            <span class="site-nav__toggle-text">Menu</span>
+        </button>
+        <button type="button" class="site-nav__dark-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode">
+            <span class="site-nav__dark-icon" aria-hidden="true">🌙</span>
+        </button>
+        <div id="site-nav-panel" class="site-nav__panel">
+            <ul class="site-nav__list">
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="index.html" data-section="home">Home</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="about.html" data-section="about">About</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link is-active" href="projects.html" data-section="projects">Projects</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="products.html" data-section="products">Products</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="contact.html" data-section="contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="projects-page">
+        <header class="projects-page__header">
+            <h1 class="projects-page__title">Projects</h1>
+            <p class="projects-page__lede">Case studies across regulated finance, inclusive health tools, complex B2B workflows, and high-volume consumer mobile experiences.</p>
+        </header>
+
+        <ul class="project-gallery" role="list">
+            <li class="project-gallery__item">
+                <article class="project-card project-card--bank">
+                    <div class="project-card__cover" aria-hidden="true">
+                        <span class="project-card__cover-label">Banking onboarding</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h2 class="project-card__title">Redesigning a banking app&rsquo;s onboarding flow</h2>
+                        <p class="project-card__desc">Rebuilt account setup around progressive disclosure and plain-language consent so new users could finish KYC steps without abandoning mid-flow, while still meeting strict compliance requirements.</p>
+                        <ul class="project-card__tags" aria-label="Tools used">
+                            <li><span class="project-tag">Figma</span></li>
+                            <li><span class="project-tag">User research</span></li>
+                            <li><span class="project-tag">Prototyping</span></li>
+                        </ul>
+                        <a class="project-card__cta" href="#">View Case Study</a>
+                    </div>
+                </article>
+            </li>
+            <li class="project-gallery__item">
+                <article class="project-card project-card--health">
+                    <div class="project-card__cover" aria-hidden="true">
+                        <span class="project-card__cover-label">Health dashboard</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h2 class="project-card__title">A health tracking dashboard for elderly users</h2>
+                        <p class="project-card__desc">Designed a calm, high-contrast dashboard with large touch targets, caregiver sharing, and trend summaries so older adults could follow vitals and medications without feeling overwhelmed by data.</p>
+                        <ul class="project-card__tags" aria-label="Tools used">
+                            <li><span class="project-tag">Accessibility</span></li>
+                            <li><span class="project-tag">Usability testing</span></li>
+                            <li><span class="project-tag">Figma</span></li>
+                        </ul>
+                        <a class="project-card__cta" href="#">View Case Study</a>
+                    </div>
+                </article>
+            </li>
+            <li class="project-gallery__item">
+                <article class="project-card project-card--saas">
+                    <div class="project-card__cover" aria-hidden="true">
+                        <span class="project-card__cover-label">B2B navigation</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h2 class="project-card__title">A B2B SaaS product&rsquo;s navigation overhaul</h2>
+                        <p class="project-card__desc">Partnered with product and engineering to untangle a growing IA tree into a scalable nav model, surfaced contextual shortcuts, and validated changes through task-based tests with power users and newcomers.</p>
+                        <ul class="project-card__tags" aria-label="Tools used">
+                            <li><span class="project-tag">Information architecture</span></li>
+                            <li><span class="project-tag">Workshops</span></li>
+                            <li><span class="project-tag">Figma</span></li>
+                        </ul>
+                        <a class="project-card__cta" href="#">View Case Study</a>
+                    </div>
+                </article>
+            </li>
+            <li class="project-gallery__item">
+                <article class="project-card project-card--food">
+                    <div class="project-card__cover" aria-hidden="true">
+                        <span class="project-card__cover-label">Food ordering</span>
+                    </div>
+                    <div class="project-card__body">
+                        <h2 class="project-card__title">A mobile food ordering experience</h2>
+                        <p class="project-card__desc">Streamlined browse-to-checkout for a busy restaurant chain app with clearer modifiers, smarter defaults for pickup times, and error-proof payment states that reduced support tickets during peak hours.</p>
+                        <ul class="project-card__tags" aria-label="Tools used">
+                            <li><span class="project-tag">Mobile UX</span></li>
+                            <li><span class="project-tag">Design systems</span></li>
+                            <li><span class="project-tag">Analytics</span></li>
+                        </ul>
+                        <a class="project-card__cta" href="#">View Case Study</a>
+                    </div>
+                </article>
+            </li>
+        </ul>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <p class="site-footer__name">Jyoti Putty</p>
+                <p class="site-footer__tagline">I design digital experiences that people actually enjoy using.</p>
+            </div>
+            <nav class="site-footer__nav" aria-label="Footer navigation">
+                <h2 class="site-footer__heading">Pages</h2>
+                <ul class="site-footer__links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="site-footer__social-wrap">
+                <h2 class="site-footer__heading">Social</h2>
+                <ul class="site-footer__social">
+                    <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">Dribbble</a></li>
+                    <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                </ul>
+            </div>
+            <div class="site-footer__bottom">
+                <small class="site-footer__copy">&copy; <span id="year"></span> Jyoti Putty. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>

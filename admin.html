@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Submissions Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f7f7f7;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .unread {
+            border-left: 5px solid red;
+        }
+
+        .meta {
+            font-size: 12px;
+            color: gray;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 6px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Contact Submissions</h1>
+<div id="container">Loading...</div>
+
+<script>
+const SUPABASE_URL = "https://gqajvzkmxqbpfigttqbv.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_hM7N2mdH3ls-POf5glcnaA_VTNHSyqy";
+
+const client = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+async function loadMessages() {
+    const { data, error } = await client
+        .from("contact_submissions")
+        .select("*")
+        .order("created_at", { ascending: false });
+
+    if (error) {
+        document.getElementById("container").innerText = "Error loading data";
+        console.error(error);
+        return;
+    }
+
+    const container = document.getElementById("container");
+    container.innerHTML = "";
+
+    data.forEach(msg => {
+        const div = document.createElement("div");
+        div.className = "card" + (msg.is_read ? "" : " unread");
+
+        div.innerHTML = `
+            <div><strong>${msg.full_name}</strong></div>
+            <div>${msg.email}</div>
+            <div>${msg.subject}</div>
+            <p>${msg.message}</p>
+            <div class="meta">${new Date(msg.created_at).toLocaleString()}</div>
+            <button onclick="markRead('${msg.id}')">
+                Mark as Read
+            </button>
+        `;
+
+        container.appendChild(div);
+    });
+}
+
+async function markRead(id) {
+    const { error } = await client
+        .from("contact_submissions")
+        .update({ is_read: true })
+        .eq("id", id);
+
+    if (error) {
+        console.error(error);
+        return;
+    }
+
+    loadMessages();
+}
+
+loadMessages();
+</script>
+
+</body>
+</html>

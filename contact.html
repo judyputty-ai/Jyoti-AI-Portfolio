@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Jyoti Putty — project enquiries, collaboration, or just saying hello.">
+    <title>Contact — Jyoti Putty</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Supabase JavaScript Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <!-- SCROLL PROGRESS BAR: Thin bar at top that fills with blue gradient as user scrolls -->
+    <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+    <nav class="site-nav" aria-label="Main navigation">
+        <button type="button" class="site-nav__toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open navigation menu">
+            <span class="site-nav__toggle-bars" aria-hidden="true">
+                <span class="site-nav__toggle-bar"></span>
+                <span class="site-nav__toggle-bar"></span>
+                <span class="site-nav__toggle-bar"></span>
+            </span>
+            <span class="site-nav__toggle-text">Menu</span>
+        </button>
+        <button type="button" class="site-nav__dark-toggle" id="dark-mode-toggle" aria-label="Toggle dark mode">
+            <span class="site-nav__dark-icon" aria-hidden="true">🌙</span>
+        </button>
+        <div id="site-nav-panel" class="site-nav__panel">
+            <ul class="site-nav__list">
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="index.html" data-section="home">Home</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="about.html" data-section="about">About</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="projects.html" data-section="projects">Projects</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link" href="products.html" data-section="products">Products</a>
+                </li>
+                <li class="site-nav__item">
+                    <a class="site-nav__link is-active" href="contact.html" data-section="contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="contact-page">
+        <header class="contact-page__header">
+            <h1 class="contact-page__title">Contact</h1>
+            <p class="contact-page__lede">Send a note for project work, collaboration ideas, or a friendly hello—I read every message.</p>
+        </header>
+
+        <div class="contact-layout">
+            <div class="contact-layout__form">
+                <div id="contact-success" class="contact-success" role="status" aria-live="polite" tabindex="-1" hidden>
+                    <p class="contact-success__title">Thank you!</p>
+                    <p class="contact-success__text">Your message has been received. I'll get back to you soon!</p>
+                </div>
+
+                <form id="contact-form" class="contact-form" novalidate>
+                    <div class="contact-form__field">
+                        <label class="contact-form__label" for="contact-fullname">Full Name</label>
+                        <input class="contact-form__input" type="text" id="contact-fullname" name="fullname" required autocomplete="name" placeholder="Your name">
+                    </div>
+                    <div class="contact-form__field">
+                        <label class="contact-form__label" for="contact-email">Email Address</label>
+                        <input class="contact-form__input" type="email" id="contact-email" name="email" required autocomplete="email" placeholder="you@example.com">
+                    </div>
+                    <div class="contact-form__field">
+                        <label class="contact-form__label" for="contact-subject">Subject</label>
+                        <select class="contact-form__input contact-form__select" id="contact-subject" name="subject" required>
+                            <option value="" disabled selected>Select a topic</option>
+                            <option value="project">Project Enquiry</option>
+                            <option value="collaboration">Collaboration</option>
+                            <option value="hi">Just Saying Hi</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="contact-form__field">
+                        <label class="contact-form__label" for="contact-message">Message</label>
+                        <textarea class="contact-form__input contact-form__textarea" id="contact-message" name="message" required rows="6" placeholder="How can I help?"></textarea>
+                    </div>
+                    <button class="contact-form__submit" type="submit">Submit</button>
+                </form>
+            </div>
+
+            <aside class="contact-aside" aria-labelledby="contact-aside-heading">
+                <h2 id="contact-aside-heading" class="contact-aside__title">Jyoti Putty</h2>
+                <p class="contact-aside__intro">Direct ways to reach me outside this form.</p>
+                <dl class="contact-details">
+                    <div class="contact-details__row">
+                        <dt class="contact-details__label">Location</dt>
+                        <dd class="contact-details__value">San Francisco Bay Area, CA</dd>
+                    </div>
+                    <div class="contact-details__row">
+                        <dt class="contact-details__label">Email</dt>
+                        <dd class="contact-details__value">
+                            <a class="contact-details__link" href="mailto:hello@jyotiputty.com">hello@jyotiputty.com</a>
+                        </dd>
+                    </div>
+                    <div class="contact-details__row">
+                        <dt class="contact-details__label">LinkedIn</dt>
+                        <dd class="contact-details__value">
+                            <a class="contact-details__link" href="https://www.linkedin.com/in/jyoti-putty" target="_blank" rel="noopener noreferrer">linkedin.com/in/jyoti-putty</a>
+                        </dd>
+                    </div>
+                </dl>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <p class="site-footer__name">Jyoti Putty</p>
+                <p class="site-footer__tagline">I design digital experiences that people actually enjoy using.</p>
+            </div>
+            <nav class="site-footer__nav" aria-label="Footer navigation">
+                <h2 class="site-footer__heading">Pages</h2>
+                <ul class="site-footer__links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="site-footer__social-wrap">
+                <h2 class="site-footer__heading">Social</h2>
+                <ul class="site-footer__social">
+                    <li><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">Dribbble</a></li>
+                    <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                </ul>
+            </div>
+            <div class="site-footer__bottom">
+                <small class="site-footer__copy">&copy; <span id="year"></span> Jyoti Putty. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+    <script src="supabase-config.js"></script>
+    <script src="js/contact.js" defer></script>
+</body>
+</html>
