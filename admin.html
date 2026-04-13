@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+  const password = "admin123"; // change this
+
+  const userInput = prompt("Enter Admin Password:");
+
+  if (userInput !== password) {
+    alert("Access denied");
+    window.location.href = "index.html";
+  }
+</script>
     <meta charset="UTF-8">
     <title>Contact Submissions Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
